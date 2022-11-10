@@ -7,6 +7,8 @@ let playerAce = 0; //checks for player's ace count
 let newPlayerSum = 0; //sum of all player cards
 let newRound = []; //new "deck" of cards after a win condition has been fulfilled
 let message = "";
+let cardImg = document.createElement("img");
+// cardImg.src = "./cards/" + card + ".png";
 
 const values = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
 const suits = ['Spades', 'Hearts', 'Diamonds', 'Clubs']
