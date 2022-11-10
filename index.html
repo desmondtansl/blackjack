@@ -5,27 +5,25 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="/main.js"></script>
     <title>Blackjack</title>
   </head>
+
+
   <body>
     <main>
-      <div id="startPage" class="page">
-        <h2>Come Play Blackjack!</h2>
-        <button id="startButton">Start</button>
-      </div>
-      <div id="gamePage" class="page">
-        <h2>Feeling Lucky?</h2>
-        <button id="Hit">Hit</button>
-        <button id="Stand">Stand</button>
-        <button id="Shuffle">Shuffle</button>
-      </div>
-      <table>
-        <tr>
-          <td>
-            <div id="main table"></div>
-          </td>
-        </tr>
-      <div id="app"></div>
+        <div id="startPage" class="pages">
+          <h1>Come Play Blackjack!</h1>
+          <button id="startButton">Start</button>
+        </div>
+        <div id="gamePage" class="pages">
+          <h1>Feeling Lucky?</h1>
+          <h2>Dealer: <span id="dealer-sum"></span></h2>
+          <br><h2>You: <span id="your-sum"></span></h2>
+          <button id="Hit" class="buttons">Hit</button>
+          <button id="Stand" class="buttons">Stand</button>
+          <button id="Shuffle" class="buttons">Shuffle</button>
+          <p id="results"></p>
+        </div>
+      <script type="module" src="/main.js"></script>
   </body>
 </html>
