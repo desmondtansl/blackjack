@@ -7,8 +7,6 @@ let playerAce = 0; //checks for player's ace count
 let newPlayerSum = 0; //sum of all player cards
 let newRound = []; //new "deck" of cards after a win condition has been fulfilled
 let message = "";
-let cardImg = document.createElement("img");
-// cardImg.src = "./cards/" + card + ".png";
 
 const values = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
 const suits = ['Spades', 'Hearts', 'Diamonds', 'Clubs']
@@ -73,14 +71,11 @@ getDeckValues();
 function shuffle(array) {
   let currentIndex = array.length, randomIndex;
 
-  // While there remain elements to shuffle.
   while (currentIndex != 0) {
 
-    // Pick a remaining element.
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
 
-    // And swap it with the current element.
     [array[currentIndex], array[randomIndex]] = [
       array[randomIndex], array[currentIndex]];
   }
@@ -92,7 +87,6 @@ const drawCard = (hand) => {
   let last = deckValue.length-1
   hand.push(deckValue.splice(last, 1)[0]);
 } 
-// for the initial hand
 drawCard(playerHand);
 drawCard(dealerHand);
 drawCard(playerHand);
@@ -147,7 +141,6 @@ document.getElementById("Stand").addEventListener('click', function()
   {console.log("You Lose");
   message = "You Lose"
   return}
-  // console.log('dealer: ' + updatedDealerSum)
   playerDraw();
   dealerDraw();
   winConditions();
@@ -212,19 +205,13 @@ const newGame = () => {
   drawCard(dealerHand);
   drawCard(playerHand);
   drawCard(dealerHand);
-  // console.log(deckValue);
-  // console.log('player: ' + updatedPlayerSum);
-  // console.log('dealer: ' + updatedDealerSum);
-  // hit();
 }
 document.getElementById("Shuffle").addEventListener('click', function() 
 { newGame();
   playerDraw();
-  // dealerDraw();
   updatedDealerSum = eval(dealerHand.join('+'));
   updatedPlayerSum = eval(playerHand.join('+'));
   initialWinConditions();
-  // winConditions();
   console.log(deckValue);
   console.log('player: ' + updatedPlayerSum);
   console.log('dealer: ' + updatedDealerSum);
