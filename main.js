@@ -97,7 +97,7 @@ const hit = () => {
     drawCard(playerHand);
 }
 let updatedPlayerSum = eval(playerHand.join('+'));
-console.log('player: ' + updatedPlayerSum)
+// console.log('player: ' + updatedPlayerSum)
 document.getElementById("your-sum").innerText = updatedPlayerSum;
 }
 
@@ -112,8 +112,9 @@ dealerCheckAce();
 const playerDraw = () => {
   updatedPlayerSum = eval(playerHand.join('+'))
   playerCheckAce();
-  console.log('player: ' + updatedPlayerSum);
+  // console.log('player: ' + updatedPlayerSum);
   document.getElementById("your-sum").innerText = updatedPlayerSum;
+  console.log('player: ' + updatedPlayerSum);
 }
 playerDraw();
 
@@ -213,8 +214,8 @@ document.getElementById("Shuffle").addEventListener('click', function()
   updatedPlayerSum = eval(playerHand.join('+'));
   initialWinConditions();
   console.log(deckValue);
-  console.log('player: ' + updatedPlayerSum);
   console.log('dealer: ' + updatedDealerSum);
+  console.log('player: ' + updatedPlayerSum);
   document.getElementById("dealer-sum").innerText = updatedDealerSum;
   document.getElementById("your-sum").innerText = updatedPlayerSum;
 });
